@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Sueños</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Plataforma de Sueños</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#examples">Ejemplos</a></li>
+          <li><a href="#meanings">Significados</a></li>
+          <li><a href="#search">Buscar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="search">
+      <h2  class="busca">Busca tus Sueños</h2>
+      <form>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Busca el significado de tu sueño..."
+        />
+        <button type="button" onclick="searchDream()">Buscar</button>
+      </form>
+      <div id="searchResults"></div>
+    </section>
+
+    <section id="home">
+      <h2>Bienvenido a la Plataforma de Sueños</h2>
+      <p>
+        Explora el significado de tus sueños y descubre interpretaciones
+        interesantes.
+      </p>
+    </section>
+
+    <section id="examples">
+      <h2>Ejemplos de Sueños</h2>
+      <div class="dream-example">
+        <h3>Soñar con Volar</h3>
+        <p>
+          Descripción: Volar en un sueño puede representar libertad y una nueva
+          perspectiva.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Agua</h3>
+        <p>
+          Descripción: El agua en los sueños puede simbolizar las emociones y el
+          estado emocional del soñador.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Caer</h3>
+        <p>
+          Descripción: Soñar con caer puede simbolizar una pérdida de control o
+          miedo a fallar en alguna área de la vida.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Ser Perseguido</h3>
+        <p>
+          Descripción: Soñar con ser perseguido puede indicar ansiedad o evitar
+          enfrentar algún problema.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Dientes</h3>
+        <p>
+          Descripción: Soñar con dientes puede reflejar preocupaciones sobre la
+          apariencia o la comunicación.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Desnudez</h3>
+        <p>
+          Descripción: Soñar con estar desnudo en público puede simbolizar
+          vulnerabilidad o vergüenza.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Muerte</h3>
+        <p>
+          Descripción: Soñar con la muerte puede representar el fin de algo y el
+          inicio de una nueva etapa.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Examen</h3>
+        <p>
+          Descripción: Soñar con exámenes puede reflejar autoevaluación o miedo
+          al fracaso.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Fuego</h3>
+        <p>
+          Descripción: Soñar con fuego puede simbolizar pasión, destrucción o
+          transformación.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Animales</h3>
+        <p>
+          Descripción: Soñar con animales puede reflejar instintos y aspectos de
+          la personalidad.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Dinero</h3>
+        <p>
+          Descripción: Soñar con dinero puede simbolizar autoestima, valor
+          personal o deseos de prosperidad.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Nadar</h3>
+        <p>
+          Descripción: Soñar con nadar puede representar el manejo de las
+          emociones y la superación de obstáculos.
+        </p>
+      </div>
+      <div class="dream-example">
+        <h3>Soñar con Perderse</h3>
+        <p>
+          Descripción: Soñar con perderse puede indicar confusión o falta de
+          dirección en la vida.
+        </p>
+      </div>
+     
+      <section class="dream-examples">
+        <div class="dream-example">
+          <h3>Soñar con Enfermedad</h3>
+          <p>
+            Descripción: Soñar con enfermedad puede reflejar preocupaciones sobre la salud o el bienestar.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Volar</h3>
+          <p>
+            Descripción: Soñar con volar puede representar una sensación de libertad y éxito.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Caer</h3>
+          <p>
+            Descripción: Soñar con caer puede indicar inseguridad o miedo al fracaso.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Dientes que se Caen</h3>
+          <p>
+            Descripción: Soñar con dientes que se caen puede reflejar preocupaciones sobre la apariencia o la pérdida.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Estar Desnudo en Público</h3>
+          <p>
+            Descripción: Soñar con estar desnudo en público puede representar vulnerabilidad o vergüenza.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Ser Perseguido</h3>
+          <p>
+            Descripción: Soñar con ser perseguido puede indicar que estás evitando problemas o conflictos.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Agua</h3>
+          <p>
+            Descripción: Soñar con agua puede reflejar tus emociones y tu estado subconsciente.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Muerte</h3>
+          <p>
+            Descripción: Soñar con muerte puede simbolizar cambios y transformaciones en tu vida.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Casa</h3>
+          <p>
+            Descripción: Soñar con una casa puede representar diferentes aspectos de tu personalidad.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Estar Atrapado</h3>
+          <p>
+            Descripción: Soñar con estar atrapado puede indicar sentimientos de restricción o necesidad de liberación.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Animales</h3>
+          <p>
+            Descripción: Soñar con animales puede reflejar tus instintos y emociones básicas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Perderse</h3>
+          <p>
+            Descripción: Soñar con perderse puede indicar falta de dirección o propósito en la vida.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Boda</h3>
+          <p>
+            Descripción: Soñar con una boda puede simbolizar compromiso y unión de diferentes aspectos de tu vida.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Examen</h3>
+          <p>
+            Descripción: Soñar con un examen puede reflejar ansiedad y presión sobre tus habilidades.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Dinero</h3>
+          <p>
+            Descripción: Soñar con dinero puede representar deseos de éxito y seguridad financiera.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Viajar</h3>
+          <p>
+            Descripción: Soñar con viajar puede indicar un deseo de exploración y aventura.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Fuego</h3>
+          <p>
+            Descripción: Soñar con fuego puede simbolizar pasión, destrucción o renovación.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Volcán</h3>
+          <p>
+            Descripción: Soñar con un volcán puede indicar emociones reprimidas o situaciones explosivas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Caminar Descalzo</h3>
+          <p>
+            Descripción: Soñar con caminar descalzo puede representar vulnerabilidad o una conexión con la naturaleza.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Pájaro</h3>
+          <p>
+            Descripción: Soñar con pájaros puede simbolizar libertad, aspiraciones y deseos.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Puente</h3>
+          <p>
+            Descripción: Soñar con un puente puede indicar una transición o la superación de obstáculos.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Nieve</h3>
+          <p>
+            Descripción: Soñar con nieve puede representar pureza, tranquilidad o frialdad emocional.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con el Mar</h3>
+          <p>
+            Descripción: Soñar con el mar puede reflejar tus emociones profundas y tu estado subconsciente.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Montaña</h3>
+          <p>
+            Descripción: Soñar con una montaña puede simbolizar desafíos y obstáculos a superar.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Bosque</h3>
+          <p>
+            Descripción: Soñar con un bosque puede representar lo desconocido y el inconsciente.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Llorar</h3>
+          <p>
+            Descripción: Soñar con llorar puede indicar una liberación de emociones reprimidas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Nacer</h3>
+          <p>
+            Descripción: Soñar con nacer puede simbolizar nuevos comienzos y oportunidades.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Morir</h3>
+          <p>
+            Descripción: Soñar con morir puede representar el fin de una etapa y el comienzo de otra.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Lluvia</h3>
+          <p>
+            Descripción: Soñar con lluvia puede simbolizar limpieza, renovación y liberación emocional.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Volar en Avión</h3>
+          <p>
+            Descripción: Soñar con volar en avión puede representar ambiciones y metas elevadas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Atrapar un Tren</h3>
+          <p>
+            Descripción: Soñar con atrapar un tren puede indicar la necesidad de seguir el ritmo de la vida o no perder oportunidades.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Llegar Tarde</h3>
+          <p>
+            Descripción: Soñar con llegar tarde puede reflejar ansiedad sobre perder oportunidades o no cumplir con expectativas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Comida</h3>
+          <p>
+            Descripción: Soñar con comida puede representar tus deseos y necesidades básicas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con Volar en Globo</h3>
+          <p>
+            Descripción: Soñar con volar en globo puede simbolizar la elevación por encima de problemas y una perspectiva más amplia.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Inundación</h3>
+          <p>
+            Descripción: Soñar con una inundación puede representar emociones abrumadoras o situaciones fuera de control.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Bosque Oscuro</h3>
+          <p>
+            Descripción: Soñar con un bosque oscuro puede indicar miedo a lo desconocido o situaciones confusas.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con un Espejo</h3>
+          <p>
+            Descripción: Soñar con un espejo puede reflejar tu autoimagen y cómo te percibes a ti mismo.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Fiesta</h3>
+          <p>
+            Descripción: Soñar con una fiesta puede simbolizar celebración, socialización y alegría.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Cueva</h3>
+          <p>
+            Descripción: Soñar con una cueva puede representar el inconsciente y la exploración interna.
+          </p>
+        </div>
+        <div class="dream-example">
+          <h3>Soñar con una Biblioteca</h3>
+          <p>
+            Descripción: Soñar con una biblioteca puede simbolizar el conocimiento, la sabiduría y la búsqueda de información.
+          </p>
+        </div>
+      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+      <p>&copy; 2024 Plataforma de Sueños</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
